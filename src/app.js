@@ -10,7 +10,7 @@ app.use(cors())
 
 const { forgotten } = require("./controllers/mailController.js")
 
-app.use("/mail", forgotten)
+app.post("/mail", forgotten)
 
 app.get("*", (req, res) => {
   res.status(404).send({ message: "Not found !" })
